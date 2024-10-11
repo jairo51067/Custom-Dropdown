@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 30px;
+  font-size: 15px;
+
+}
+
+a:hover {
+  color: chocolate;
+  transition: color 0.3s ease-in-out;
+  text-transform: inherit;
+  transition: all 300ms;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  /* height: 100vh; */
+  margin: 5%;
+  background: #222;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  margin: 1.2rem 0;
+  position: relative;
+
+  #announcement {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  label {
+    display: block;
+    padding: .7rem .8rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: .75rem;
+  }
+
+  select,
+  button,
+  ul {
+    display: block;
+    padding: .7rem .8rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    background: white;
+    border: 0;
+    font-size: 1rem;
+
+    border-radius: 15px;
+  }
+
+  button {
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: bold;
+
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f107";
+      vertical-align: middle;
+      font-weight: 900;
+      position: absolute;
+      right: .8rem;
+    }
+
+    &:focus-visible {
+      outline: 0;
+      outline-offset: -3px;
+      box-shadow: 0 0 5px 2px rgb(251, 120, 60) inset;
+    }
+  }
+
+  ul {
+    color: #3f403b;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 4.8rem;
+    max-height: 20rem;
+    overflow-y: auto;
+    list-style-type: none;
+    padding: 0;
+    margin-top: .1rem;
+    opacity: 0;
+    transform: scale(1, 0);
+    transform-origin: top left;
+    transition: all .3s ease-in;
+    pointer-events: none;
+    z-index: 2;
+
+    &.active {
+      opacity: 1;
+      transform: scale(1, 1);
+      pointer-events: auto;
+    }
+
+    li {
+      padding: 1rem 2rem;
+      border-top: 1px solid #e6e6e6;
+      cursor: pointer;
+      transition: all .3s ease-in;
+      position: relative;
+
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f00c";
+        vertical-align: middle;
+        font-weight: 900;
+        position: absolute;
+        right: .8rem;
+        opacity: 0;
+        transition: opacity .300s ease-out;
+      }
+
+      &:hover,
+      &.current {
+        background: #e6e6e6;
+      }
+
+      &.active {
+        border: 2px solid;
+        box-shadow: 0 0 4px 4px rgb(177, 96, 29);
+      }
+
+      &.active::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+footer {
+  width: auto;
+  position: absolute;
+  bottom: 10px;
+  color: white;
+  padding: 20px;
+  text-align: start;
+
+}

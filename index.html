@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Custom Dropdown</title>
+</head>
+
+<body>
+  <div>
+    <h1>Custom Dropdown</h1>
+    <div class="container">
+      <label for="select">Custom Select box</label>
+      <button role="combobox" id="select" value="Select" aria-controls="listbox" aria-haspopup="listbox" tabindex="0"
+        aria-expanded="false">
+        Select an Item</button>
+      <div id="announcement" aria-live="assertive" role="alert"></div>
+      <ul role="listbox" id="listbox">
+        <li role="option">first element</li>
+        <li role="option">second element</li>
+        <li role="option">third element</li>
+        <li role="option">fourth element</li>
+        <li role="option">fifth element</li>
+      </ul>
+    </div>
+
+    <!-- <div class="container">
+      <label for="select2">Default Select</label>
+      <select id="select2">
+        <option>first element</option>
+        <option>second element</option>
+        <option>third element</option>
+        <option>fourth element</option>
+        <option>fifth element</option>
+      </select>
+    </div>
+  </div> -->
+
+
+
+  <footer>
+    <p>Author: Jairo Cárdenas<br>
+      <hr>
+      <a href="mailto:jairocardenas@gmail.com">jairocardenas@gmail.com</a>
+      <!-- <br>
+      <a href="https://www.freecodecamp.org/news/how-to-build-an-accessible-custom-dropdown-select-element/">- How to
+        Build an Accessible Custom Dropdown Select Element</a>
+      <br>
+      <a href="https://codepen.io/leezee/pen/abXPjvM">- Working example of custom selection on Codepen</a> -->
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
